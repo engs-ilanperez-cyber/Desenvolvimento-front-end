@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AoD Tickets</title>
+</head>
+<body>
+
+<style>
+    section{
+        background-color: darkorchid;
+        float:right;
+        padding-top: 5%;
+        padding-right: 5%;
+        
+    }
+</style>
+
+<section>
+
+   <iframe width="854" height="480" src="https://www.youtube.com/embed/7wMz8mDyHgM?si=SWALGIKt6xxi3a0l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin-when-cross-origin" allowfullscreen></iframe>
+
+</section>
+    </iframe>
+    <br><br>
+    <h1>cadastro de VOCE</h1>
+    <form id="formCadastro">
+        <label for="nome">nome:</label>
+        <input type="text" name="nome" id="nome"
+        placeholder="insira o nome" required>
+        <br><br>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email"
+        placeholder="insira seu email" required>
+        <br><br>
+        <label for="idade">insira sua idade:</label>
+        <input type="number" name="idade" id="idade">
+        <br><br>
+        <button type="submit">enviar</button>
+    </form>
+
+    <script>
+        const formulario = document.getElementById("formCadastro")
+        formulario.addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const dados = {
+                nome: document.getElementById("nome").value,
+                email: document.getElementById("email").value,
+                idade: document.getElementById("idade").value
+            };
+
+            console.log(dados);
+
+        })
+    </script>
+
+</body>
+</html>
